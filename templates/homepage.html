@@ -1,0 +1,123 @@
+{% extends "main.html" %}
+{% block title %} Airbnb {% endblock %}
+
+{% block style %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #FF5A5F;
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        
+    }
+    .listings {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        flex-wrap: wrap;
+        
+    }
+    .listing {
+        width: 200px;
+        margin: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        
+        
+    }
+    .listing img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        
+    }
+    .listing-info {
+        padding: 10px;
+    }
+    .listing-info h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+    .listing-info p {
+        font-size: 14px;
+        color: #777;
+    }
+    footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+ <!-- Header Section -->
+ <header>
+    <h1>Airbnb</h1>
+    <p>Find unique places to stay</p>
+</header>
+
+<!-- Listings Section -->
+<div class="listings">
+    <!-- Listing 1 -->
+    <div class="listing">
+        <a href="{{ url_for('cozy') }}"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-668620215138733009/original/2e573684-fd2d-4046-b67a-2aae9b85a49c.jpeg?im_w=1200&im_format=avif"></a>
+        <div class="listing-info">
+            <h3>Cozy Cottage</h3>
+            <p>2 guests • 1 bed</p>
+            <p><b>₹9,898 night </b></p>
+        </div>
+    </div>
+
+    <!-- Listing 2 -->
+    <div class="listing">
+        <img src="https://i.pinimg.com/474x/de/38/c4/de38c46268c072f976dbf4019507dd5f.jpg" alt="Listing 2">
+        <div class="listing-info">
+            <h3>Modern Apartment</h3>
+            <p>4 guests • 2 beds</p>
+            <p><b>₹12,340 night </b></p>
+        </div>
+    </div>
+
+    <!-- Listing 3 -->
+    <div class="listing">
+        <img src="https://i.pinimg.com/736x/cc/49/95/cc4995ec34d816adb57e7dd772e9be15.jpg" alt="Listing 3">
+        <div class="listing-info">
+            <h3>Beach House</h3>
+            <p>6 guests • 3 beds</p>
+            <p><b>₹11,565 night </b></p>
+        </div>
+    </div>
+
+    <!-- Listing 4 -->
+    <div class="listing">
+        <img src="https://i.pinimg.com/474x/ca/65/3d/ca653d6775c597aa03c119d7fc47395e.jpg" alt="Listing 4">
+        <div class="listing-info">
+            <h3>Mountain Retreat</h3>
+            <p>2 guests • 1 bed</p>
+            <p><b>₹7,569 night </b></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2025 Airbnb, Inc.</p>
+</footer>
+
+
+{%endblock%}
